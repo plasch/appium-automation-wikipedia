@@ -102,12 +102,14 @@ public class FirstTest {
                 "Cannot find 'Search Wikipedia' input",
                 5
         );
+
         waitForElementAndSendKeys(
                 By.xpath("//*[contains(@text, 'Search…')]"),
                 "Java",
                 "Cannot find search input",
                 5
         );
+
         waitForElementAndClick(
                 By.xpath("//*[@resource-id='org.wikipedia:id/page_list_item_container']//*[@text='Object-oriented programming language']"),
                 "Cannot find 'Search Wikipedia' input",
@@ -127,6 +129,32 @@ public class FirstTest {
                 "Java (programming language)",
                 article_title
         );
+    }
+
+    // Ex2 Create method: Check presence placeholder 'Search…'
+    @Test
+    public void testCheckPlaceholderInSearchField()
+    {
+        waitForElementAndClick(
+                By.id("org.wikipedia:id/search_container"),
+                "Cannot find 'Search Wikipedia' input",
+                5
+        );
+
+        WebElement element = waitForElementPresent(
+                By.id("org.wikipedia:id/search_src_text"),
+                "Cannot find placeholder 'Search…'",
+                15
+        );
+
+        String placeholderSearch = element.getAttribute("text");
+
+        Assert.assertEquals(
+                "We don't see placeholder 'Search…'",
+                "Search…",
+                placeholderSearch
+        );
+
     }
 
     private WebElement waitForElementPresent(By by, String error_message, long timeoutInSeconds)
