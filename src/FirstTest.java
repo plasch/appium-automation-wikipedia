@@ -9,7 +9,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
 import java.net.URL;
 
 public class FirstTest {
@@ -164,14 +163,14 @@ public class FirstTest {
         waitForElementAndClick(
                 By.id("org.wikipedia:id/search_container"),
                 "Cannot find 'Search Wikipedia' input",
-                5
+                10
         );
 
         waitForElementAndSendKeys(
                 By.id("org.wikipedia:id/search_src_text"),
                 "Android",
                 "Cannot find search input",
-                5
+                10
         );
 
         waitForElementPresent(
@@ -195,13 +194,43 @@ public class FirstTest {
         waitForElementNotPresent(
                 By.xpath("//*[@resource-id='org.wikipedia:id/page_list_item_container']//*[@text='An open source operating system for mobile devices created by Google']"),
                 "First search result is still present on the page",
-                5
+                20
         );
 
         waitForElementNotPresent(
                 By.xpath("//*[@resource-id='org.wikipedia:id/page_list_item_container']//*[@text='Wikimedia list article']"),
                 "Second search result is still present on the page",
+                10
+        );
+    }
+
+    // Ex4 Create test: Check words in search results
+    @Test
+    public void testCheckWordInSearchResults()
+    {
+        waitForElementAndClick(
+                By.id("org.wikipedia:id/search_container"),
+                "Cannot find 'Search Wikipedia' input",
                 5
+        );
+
+        waitForElementAndSendKeys(
+                By.id("org.wikipedia:id/search_src_text"),
+                "Android",
+                "Cannot find search input",
+                5
+        );
+
+        WebElement element = waitForElementPresent(
+                By.id("org.wikipedia:id/page_list_item_title"),
+                "Cannot find search results",
+                15
+        );
+
+        String search_results = element.getAttribute("text");
+        Assert.assertTrue(
+                "No one match",
+                search_results.contains("Android")
         );
     }
 
