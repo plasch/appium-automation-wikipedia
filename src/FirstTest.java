@@ -10,6 +10,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import java.net.URL;
+import java.util.List;
 
 public class FirstTest {
 
@@ -211,27 +212,28 @@ public class FirstTest {
         waitForElementAndClick(
                 By.id("org.wikipedia:id/search_container"),
                 "Cannot find 'Search Wikipedia' input",
-                5
+                10
         );
 
         waitForElementAndSendKeys(
                 By.id("org.wikipedia:id/search_src_text"),
                 "Android",
                 "Cannot find search input",
-                5
+                10
         );
 
-        WebElement element = waitForElementPresent(
-                By.id("org.wikipedia:id/page_list_item_title"),
-                "Cannot find search results",
-                15
-        );
-
-        String search_results = element.getAttribute("text");
-        Assert.assertTrue(
-                "No one match",
-                search_results.contains("Android")
-        );
+        List<WebElement> elements = driver.findElementsById("org.wikipedia:id/page_list_item_title");
+        WebDriverWait wait = new WebDriverWait(driver, 10);
+        wait.withMessage("Cannot find search results");
+        wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.id("org.wikipedia:id/page_list_item_title")));
+        int counter = 0;
+        int size = elements.size();
+        for (int i = 0; i < size; i++)
+        {
+            if (elements.get(i).getAttribute("text").contains("Android"))
+                counter++;
+        }
+        Assert.assertEquals("Not all search results contain word", size, counter);
     }
 
     private WebElement waitForElementPresent(By by, String error_message, long timeoutInSeconds)
