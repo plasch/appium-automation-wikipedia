@@ -13,6 +13,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import java.net.URL;
+import java.util.LinkedList;
 import java.util.List;
 
 public class FirstTest {
@@ -500,7 +501,7 @@ public class FirstTest {
         );
     }
 
-    // Ex4 Create test: Check words in search results
+    // Ex4* Create test: Check words in search results
     @Test
     public void testCheckWordInSearchResults()
     {
@@ -510,9 +511,10 @@ public class FirstTest {
                 10
         );
 
+        String search_line = "Android";
         waitForElementAndSendKeys(
                 By.id("org.wikipedia:id/search_src_text"),
-                "Android",
+                search_line,
                 "Cannot find search input",
                 10
         );
@@ -521,14 +523,20 @@ public class FirstTest {
         WebDriverWait wait = new WebDriverWait(driver, 10);
         wait.withMessage("Cannot find search results");
         wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.id("org.wikipedia:id/page_list_item_title")));
+
+        List<String> irrelevant_elements = new LinkedList<>();
         int counter = 0;
-        int size = elements.size();
-        for (int i = 0; i < size; i++)
+        for (int i = 0; i < elements.size(); i++)
         {
-            if (elements.get(i).getAttribute("text").contains("Android"))
+            if (elements.get(i).getAttribute("text").contains(search_line))
                 counter++;
+            else irrelevant_elements.add(elements.get(i).getAttribute("text"));
         }
-        Assert.assertEquals("Not all search results contain word", size, counter);
+
+        Assert.assertEquals("Next search results don't contain word '" + search_line + "': " + irrelevant_elements,
+                elements.size(),
+                counter
+        );
     }
 
     // Ex5 Create test: Save two articles in one folder

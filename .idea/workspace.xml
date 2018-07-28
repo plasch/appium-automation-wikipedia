@@ -19,12 +19,12 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="2293" />
+          <entry key="java" value="2727" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="2293" />
+          <entry key="JAVA" value="2727" />
         </counts>
       </usages-collector>
     </session>
@@ -34,8 +34,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/FirstTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="274">
-              <caret line="535" column="24" selection-start-line="535" selection-start-column="24" selection-end-line="535" selection-end-column="24" />
+            <state relative-caret-position="117">
+              <caret line="503" column="7" selection-start-line="503" selection-start-column="7" selection-end-line="503" selection-end-column="54" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#firstTest#0;class#FirstTest#0" />
@@ -44,12 +44,14 @@
                 <element signature="method#testSwipeArticle#0;class#FirstTest#0" />
                 <element signature="method#saveFirstArticleToMyList#0;class#FirstTest#0" />
                 <element signature="method#testAmountOfEmptySearch#0;class#FirstTest#0" />
-                <element signature="method#testAmountOfEmptySearch#0;class#FirstTest#0" />
                 <element signature="method#testChangeScreenOrientationOnSearchResults#0;class#FirstTest#0" />
                 <element signature="method#testCheckSearchArticleInBackground#0;class#FirstTest#0" />
                 <element signature="method#testCheckPlaceholderInSearchField#0;class#FirstTest#0" />
                 <element signature="method#testCancelSearchResult#0;class#FirstTest#0" />
                 <element signature="method#testCheckWordInSearchResults#0;class#FirstTest#0" />
+                <element signature="method#testSaveArticlesInOneFolder#0;class#FirstTest#0" />
+                <element signature="e#25766#25767#0" expanded="true" />
+                <element signature="e#25795#25796#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -81,7 +83,7 @@
   </component>
   <component name="ProjectFrameBounds" extendedState="1">
     <option name="x" value="-18" />
-    <option name="width" value="1326" />
+    <option name="width" value="1049" />
     <option name="height" value="1049" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -112,7 +114,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1532785303351" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1532793433670" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/libs/selenium-server-standalone-3.4.0.jar!/" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
@@ -131,18 +133,9 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.FirstTest.testSaveArticlesInOneFolder">
+  <component name="RunManager" selected="JUnit.FirstTest.testCheckWordInSearchResults">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="FirstTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="appium_automation_java" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="FirstTest" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -158,11 +151,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FirstTest.testChangeScreenOrientationOnSearchResults" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="FirstTest.testCancelSearchResult" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="appium_automation_java" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="FirstTest" />
-      <option name="METHOD_NAME" value="testChangeScreenOrientationOnSearchResults" />
+      <option name="METHOD_NAME" value="testCancelSearchResult" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
       <method v="2">
@@ -174,6 +167,17 @@
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="FirstTest" />
       <option name="METHOD_NAME" value="testCheckSearchArticleInBackground" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FirstTest.testCheckWordInSearchResults" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="appium_automation_java" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="FirstTest" />
+      <option name="METHOD_NAME" value="testCheckWordInSearchResults" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
       <method v="2">
@@ -207,18 +211,18 @@
     </configuration>
     <list>
       <item itemvalue="JUnit.FirstTest.saveFirstArticleToMyList" />
-      <item itemvalue="JUnit.FirstTest.testChangeScreenOrientationOnSearchResults" />
       <item itemvalue="JUnit.FirstTest.testCheckSearchArticleInBackground" />
       <item itemvalue="JUnit.FirstTest.testSaveArticlesInOneFolder" />
-      <item itemvalue="JUnit.FirstTest" />
+      <item itemvalue="JUnit.FirstTest.testCheckWordInSearchResults" />
+      <item itemvalue="JUnit.FirstTest.testCancelSearchResult" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.FirstTest.testCheckWordInSearchResults" />
+        <item itemvalue="JUnit.FirstTest.testCancelSearchResult" />
         <item itemvalue="JUnit.FirstTest.testSaveArticlesInOneFolder" />
         <item itemvalue="JUnit.FirstTest.saveFirstArticleToMyList" />
         <item itemvalue="JUnit.FirstTest.testCheckSearchArticleInBackground" />
-        <item itemvalue="JUnit.FirstTest.testChangeScreenOrientationOnSearchResults" />
-        <item itemvalue="JUnit.FirstTest" />
       </list>
     </recent_temporary>
   </component>
@@ -236,41 +240,42 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="FirstTest_testSaveArticlesInOneFolder - 2018.07.28 at 16h 14m 32s.xml">
-      <configuration name="FirstTest.testSaveArticlesInOneFolder" configurationId="JUnit" />
+    <history-entry file="FirstTest_testCheckWordInSearchResults - 2018.07.28 at 18h 30m 50s.xml">
+      <configuration name="FirstTest.testCheckWordInSearchResults" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FirstTest_testSaveArticlesInOneFolder - 2018.07.28 at 16h 19m 05s.xml">
-      <configuration name="FirstTest.testSaveArticlesInOneFolder" configurationId="JUnit" />
+    <history-entry file="FirstTest_testCheckWordInSearchResults - 2018.07.28 at 18h 31m 02s.xml">
+      <configuration name="FirstTest.testCheckWordInSearchResults" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FirstTest_testSaveArticlesInOneFolder - 2018.07.28 at 16h 21m 10s.xml">
-      <configuration name="FirstTest.testSaveArticlesInOneFolder" configurationId="JUnit" />
+    <history-entry file="FirstTest_testCancelSearchResult - 2018.07.28 at 18h 31m 38s.xml">
+      <configuration name="FirstTest.testCancelSearchResult" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FirstTest_testSaveArticlesInOneFolder - 2018.07.28 at 16h 21m 45s.xml">
-      <configuration name="FirstTest.testSaveArticlesInOneFolder" configurationId="JUnit" />
+    <history-entry file="FirstTest_testCheckWordInSearchResults - 2018.07.28 at 18h 38m 03s.xml">
+      <configuration name="FirstTest.testCheckWordInSearchResults" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FirstTest_testSaveArticlesInOneFolder - 2018.07.28 at 16h 23m 17s.xml">
-      <configuration name="FirstTest.testSaveArticlesInOneFolder" configurationId="JUnit" />
+    <history-entry file="FirstTest_testCheckWordInSearchResults - 2018.07.28 at 18h 43m 56s.xml">
+      <configuration name="FirstTest.testCheckWordInSearchResults" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FirstTest - 2018.07.28 at 16h 29m 21s.xml">
-      <configuration name="FirstTest" configurationId="JUnit" />
+    <history-entry file="FirstTest_testCheckWordInSearchResults - 2018.07.28 at 18h 47m 47s.xml">
+      <configuration name="FirstTest.testCheckWordInSearchResults" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FirstTest_testChangeScreenOrientationOnSearchResults - 2018.07.28 at 16h 32m 36s.xml">
-      <configuration name="FirstTest.testChangeScreenOrientationOnSearchResults" configurationId="JUnit" />
+    <history-entry file="FirstTest_testCheckWordInSearchResults - 2018.07.28 at 18h 48m 48s.xml">
+      <configuration name="FirstTest.testCheckWordInSearchResults" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FirstTest_testCheckSearchArticleInBackground - 2018.07.28 at 16h 33m 07s.xml">
-      <configuration name="FirstTest.testCheckSearchArticleInBackground" configurationId="JUnit" />
+    <history-entry file="FirstTest_testCheckWordInSearchResults - 2018.07.28 at 18h 53m 55s.xml">
+      <configuration name="FirstTest.testCheckWordInSearchResults" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FirstTest_saveFirstArticleToMyList - 2018.07.28 at 16h 34m 49s.xml">
-      <configuration name="FirstTest.saveFirstArticleToMyList" configurationId="JUnit" />
+    <history-entry file="FirstTest_testCheckWordInSearchResults - 2018.07.28 at 18h 55m 48s.xml">
+      <configuration name="FirstTest.testCheckWordInSearchResults" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FirstTest_testSaveArticlesInOneFolder - 2018.07.28 at 16h 37m 08s.xml">
-      <configuration name="FirstTest.testSaveArticlesInOneFolder" configurationId="JUnit" />
+    <history-entry file="FirstTest_testCheckWordInSearchResults - 2018.07.28 at 18h 57m 37s.xml">
+      <configuration name="FirstTest.testCheckWordInSearchResults" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-14" y="0" width="1088" height="860" extended-state="0" />
+    <frame x="-14" y="0" width="860" height="860" extended-state="1" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.08932039" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.114713214" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -279,7 +284,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49910873" visible="true" weight="0.32506886" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49910873" visible="true" weight="0.32506886" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39945653" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -309,8 +314,8 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/FirstTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="535" column="24" selection-start-line="535" selection-start-column="24" selection-end-line="535" selection-end-column="24" />
+        <state relative-caret-position="117">
+          <caret line="503" column="7" selection-start-line="503" selection-start-column="7" selection-end-line="503" selection-end-column="54" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#firstTest#0;class#FirstTest#0" />
@@ -319,12 +324,14 @@
             <element signature="method#testSwipeArticle#0;class#FirstTest#0" />
             <element signature="method#saveFirstArticleToMyList#0;class#FirstTest#0" />
             <element signature="method#testAmountOfEmptySearch#0;class#FirstTest#0" />
-            <element signature="method#testAmountOfEmptySearch#0;class#FirstTest#0" />
             <element signature="method#testChangeScreenOrientationOnSearchResults#0;class#FirstTest#0" />
             <element signature="method#testCheckSearchArticleInBackground#0;class#FirstTest#0" />
             <element signature="method#testCheckPlaceholderInSearchField#0;class#FirstTest#0" />
             <element signature="method#testCancelSearchResult#0;class#FirstTest#0" />
             <element signature="method#testCheckWordInSearchResults#0;class#FirstTest#0" />
+            <element signature="method#testSaveArticlesInOneFolder#0;class#FirstTest#0" />
+            <element signature="e#25766#25767#0" expanded="true" />
+            <element signature="e#25795#25796#0" expanded="true" />
           </folding>
         </state>
       </provider>
