@@ -531,6 +531,183 @@ public class FirstTest {
         Assert.assertEquals("Not all search results contain word", size, counter);
     }
 
+    // Ex5 Create test: Save two articles in one folder
+    @Test
+    public void testSaveArticlesInOneFolder()
+    {
+        // Search and add FIRST article
+        waitForElementAndClick(
+                By.xpath("//*[contains(@text, 'Search Wikipedia')]"),
+                "Cannot find 'Search Wikipedia' input",
+                5
+        );
+
+        String search_line = "Android";
+        waitForElementAndSendKeys(
+                By.xpath("//*[contains(@text, 'Search…')]"),
+                search_line,
+                "Cannot find search input",
+                5
+        );
+
+        waitForElementAndClick(
+                By.xpath("//*[@resource-id='org.wikipedia:id/page_list_item_container']//*[@text='An open source operating system for mobile devices created by Google']"),
+                "Cannot find first search result",
+                5
+        );
+
+        waitForElementPresent(
+                By.id("org.wikipedia:id/view_page_title_text"),
+                "Cannot find first article title",
+                5
+        );
+
+        waitForElementAndClick(
+                By.xpath("//android.widget.ImageView[@content-desc='More options']"),
+                "Cannot find button to open first article options",
+                5
+        );
+
+        waitForElementAndClick(
+                By.xpath("//*[@text='Add to reading list']"),
+                "Cannot find option to add first article to reading list",
+                5
+        );
+
+        waitForElementAndClick(
+                By.id("org.wikipedia:id/onboarding_button"),
+                "Cannot find 'Got it' tip overlay",
+                5
+        );
+
+        waitForElementAndClear(
+                By.id("org.wikipedia:id/text_input"),
+                "Cannot find input to set name of articles folder",
+                5
+        );
+
+        String name_of_folder = "Android OS";
+
+        waitForElementAndSendKeys(
+                By.id("org.wikipedia:id/text_input"),
+                name_of_folder,
+                "Cannot put text into article folder input",
+                5
+        );
+
+        waitForElementAndClick(
+                By.xpath("//*[@text='OK']"),
+                "Cannot press OK button",
+                5
+        );
+
+        waitForElementAndClick(
+                By.xpath("//android.widget.ImageButton[@content-desc='Navigate up']"),
+                "Cannot close first article, cannot find X link",
+                5
+        );
+
+        // Search and add SECOND article
+        waitForElementAndClick(
+                By.xpath("//*[contains(@text, 'Search Wikipedia')]"),
+                "Cannot find 'Search Wikipedia' input",
+                5
+        );
+
+        waitForElementAndSendKeys(
+                By.xpath("//*[contains(@text, 'Search…')]"),
+                search_line,
+                "Cannot find search input",
+                5
+        );
+
+        waitForElementAndClick(
+                By.xpath("//*[@resource-id='org.wikipedia:id/page_list_item_container']//*[@text='Android software development']"),
+                "Cannot find second search result",
+                5
+        );
+
+        waitForElementPresent(
+                By.id("org.wikipedia:id/view_page_title_text"),
+                "Cannot find second article title",
+                15
+        );
+
+        waitForElementAndClick(
+                By.xpath("//android.widget.ImageView[@content-desc='More options']"),
+                "Cannot find button to open second article options",
+                5
+        );
+
+        waitForElementAndClick(
+                By.xpath("//*[@text='Add to reading list']"),
+                "Cannot find option to add second article to reading list",
+                5
+        );
+
+        waitForElementAndClick(
+                By.xpath("//*[@text='" + name_of_folder + "']"),
+                "Cannot find created folder " + name_of_folder,
+                5
+        );
+
+        waitForElementAndClick(
+                By.xpath("//android.widget.ImageButton[@content-desc='Navigate up']"),
+                "Cannot close second article, cannot find X link",
+                5
+        );
+
+        // Transfer to My list and remove first article
+        waitForElementAndClick(
+                By.xpath("//android.widget.FrameLayout[@content-desc='My lists']"),
+                "Cannot find navigation button to My list",
+                5
+        );
+
+        waitForElementAndClick(
+                By.xpath("//*[@text='" + name_of_folder + "']"),
+                "Cannot find created folder " + name_of_folder + " in My list",
+                5
+        );
+
+        swipeElementToLeft(
+                By.xpath("//*[@text='An open source operating system for mobile devices created by Google']"),
+                "Cannot find first saved article in My list"
+        );
+
+        waitForElementNotPresent(
+                By.xpath("//*[@text='An open source operating system for mobile devices created by Google']"),
+                "Cannot delete first saved article from My list",
+                5
+        );
+
+        String article_title_from_my_list = waitForElementAndGetAttribute(
+                By.xpath("//*[@text='Android software development']"),
+                "text",
+                "Cannot find second saved article",
+                5
+        );
+
+        waitForElementAndClick(
+                By.xpath("//*[@text='Android software development']"),
+                "Cannot open second saved article",
+                10
+        );
+
+        String title_of_opened_article = waitForElementAndGetAttribute(
+                By.xpath("//*[@resource-id='org.wikipedia:id/view_page_title_text'][@text='Android software development']"),
+                "text",
+                "Cannot find title of second opened article",
+                10
+        );
+
+        Assert.assertEquals(
+                "Titles articles don't match",
+                article_title_from_my_list,
+                title_of_opened_article
+        );
+    }
+
     private WebElement waitForElementPresent(By by, String error_message, long timeoutInSeconds)
     {
         WebDriverWait wait = new WebDriverWait(driver, timeoutInSeconds);
