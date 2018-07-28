@@ -4,25 +4,52 @@
     <list default="true" id="95cf2ea7-c287-4abf-a0c3-28ab3bd5b665" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
-    <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="-2142938326">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.open.time.9" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="java" value="2291" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="2291" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="FirstTest.java" pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/FirstTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="94">
-              <caret line="161" column="29" selection-start-line="161" selection-start-column="29" selection-end-line="161" selection-end-column="29" />
+            <state relative-caret-position="114">
+              <caret line="172" column="23" lean-forward="true" selection-start-line="172" selection-start-column="23" selection-end-line="172" selection-end-column="23" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#firstTest#0;class#FirstTest#0" />
                 <element signature="method#testCancelSearch#0;class#FirstTest#0" />
                 <element signature="method#testCompareArticleTitle#0;class#FirstTest#0" />
+                <element signature="method#testSwipeArticle#0;class#FirstTest#0" />
+                <element signature="method#saveFirstArticleToMyList#0;class#FirstTest#0" />
+                <element signature="method#testAmountOfEmptySearch#0;class#FirstTest#0" />
+                <element signature="method#testAmountOfEmptySearch#0;class#FirstTest#0" />
+                <element signature="method#testChangeScreenOrientationOnSearchResults#0;class#FirstTest#0" />
+                <element signature="method#testCheckSearchArticleInBackground#0;class#FirstTest#0" />
                 <element signature="method#testCheckPlaceholderInSearchField#0;class#FirstTest#0" />
+                <element signature="method#testCancelSearchResult#0;class#FirstTest#0" />
+                <element signature="method#testCheckWordInSearchResults#0;class#FirstTest#0" />
               </folding>
             </state>
           </provider>
@@ -37,6 +64,11 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>@text='&quot;</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -47,10 +79,10 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
-    <option name="x" value="-11" />
-    <option name="width" value="1184" />
-    <option name="height" value="1043" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-18" />
+    <option name="width" value="1326" />
+    <option name="height" value="1049" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -58,8 +90,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="AndroidView" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -71,20 +101,23 @@
             <path>
               <item name="appium_automation_java" type="b2602c69:ProjectViewProjectNode" />
               <item name="appium_automation_java" type="462c0819:PsiDirectoryNode" />
-              <item name=".idea" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1532784836965" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/libs/selenium-server-standalone-3.4.0.jar!/" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Language Defaults" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -98,147 +131,94 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.All in appium_automation_java">
+  <component name="RunManager" selected="JUnit.FirstTest.saveFirstArticleToMyList">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
-    <configuration name="All in appium_automation_java" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="FirstTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="appium_automation_java" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="package" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
-    </configuration>
-    <configuration name="FirstTest.testCancelSearch" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="appium_automation_java" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="FirstTest" />
-      <option name="METHOD_NAME" value="testCancelSearch" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
-    <configuration name="FirstTest.testCancelSearchResult" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="FirstTest.saveFirstArticleToMyList" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="appium_automation_java" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="FirstTest" />
-      <option name="METHOD_NAME" value="testCancelSearchResult" />
+      <option name="METHOD_NAME" value="saveFirstArticleToMyList" />
       <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
-    <configuration name="FirstTest.testCheckPlaceholderInSearchField" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="FirstTest.testChangeScreenOrientationOnSearchResults" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="appium_automation_java" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="FirstTest" />
-      <option name="METHOD_NAME" value="testCheckPlaceholderInSearchField" />
+      <option name="METHOD_NAME" value="testChangeScreenOrientationOnSearchResults" />
       <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
-    <configuration name="FirstTest.testCheckWordInSearchResults" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="FirstTest.testCheckSearchArticleInBackground" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="appium_automation_java" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="FirstTest" />
-      <option name="METHOD_NAME" value="testCheckWordInSearchResults" />
+      <option name="METHOD_NAME" value="testCheckSearchArticleInBackground" />
       <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FirstTest.testSaveArticlesInOneFolder" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="appium_automation_java" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="FirstTest" />
+      <option name="METHOD_NAME" value="testSaveArticlesInOneFolder" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="GROUP_NAME" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
       <properties />
       <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.FirstTest.testCheckPlaceholderInSearchField" />
-      <item itemvalue="JUnit.FirstTest.testCheckWordInSearchResults" />
-      <item itemvalue="JUnit.All in appium_automation_java" />
-      <item itemvalue="JUnit.FirstTest.testCancelSearch" />
-      <item itemvalue="JUnit.FirstTest.testCancelSearchResult" />
+      <item itemvalue="JUnit.FirstTest.saveFirstArticleToMyList" />
+      <item itemvalue="JUnit.FirstTest.testChangeScreenOrientationOnSearchResults" />
+      <item itemvalue="JUnit.FirstTest.testCheckSearchArticleInBackground" />
+      <item itemvalue="JUnit.FirstTest.testSaveArticlesInOneFolder" />
+      <item itemvalue="JUnit.FirstTest" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.All in appium_automation_java" />
-        <item itemvalue="JUnit.FirstTest.testCancelSearchResult" />
-        <item itemvalue="JUnit.FirstTest.testCancelSearch" />
-        <item itemvalue="JUnit.FirstTest.testCheckWordInSearchResults" />
-        <item itemvalue="JUnit.FirstTest.testCheckPlaceholderInSearchField" />
+        <item itemvalue="JUnit.FirstTest.saveFirstArticleToMyList" />
+        <item itemvalue="JUnit.FirstTest.testCheckSearchArticleInBackground" />
+        <item itemvalue="JUnit.FirstTest.testChangeScreenOrientationOnSearchResults" />
+        <item itemvalue="JUnit.FirstTest" />
+        <item itemvalue="JUnit.FirstTest.testSaveArticlesInOneFolder" />
       </list>
     </recent_temporary>
   </component>
@@ -256,67 +236,67 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="FirstTest_testCheckWordInSearchResults - 2018.07.23 at 15h 55m 45s.xml">
-      <configuration name="FirstTest.testCheckWordInSearchResults" configurationId="JUnit" />
+    <history-entry file="FirstTest_testSaveArticlesInOneFolder - 2018.07.28 at 16h 07m 00s.xml">
+      <configuration name="FirstTest.testSaveArticlesInOneFolder" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FirstTest_testCheckWordInSearchResults - 2018.07.23 at 15h 56m 53s.xml">
-      <configuration name="FirstTest.testCheckWordInSearchResults" configurationId="JUnit" />
+    <history-entry file="FirstTest_testSaveArticlesInOneFolder - 2018.07.28 at 16h 12m 34s.xml">
+      <configuration name="FirstTest.testSaveArticlesInOneFolder" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FirstTest_testCheckWordInSearchResults - 2018.07.23 at 15h 58m 23s.xml">
-      <configuration name="FirstTest.testCheckWordInSearchResults" configurationId="JUnit" />
+    <history-entry file="FirstTest_testSaveArticlesInOneFolder - 2018.07.28 at 16h 14m 32s.xml">
+      <configuration name="FirstTest.testSaveArticlesInOneFolder" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FirstTest_testCheckWordInSearchResults - 2018.07.23 at 16h 06m 10s.xml">
-      <configuration name="FirstTest.testCheckWordInSearchResults" configurationId="JUnit" />
+    <history-entry file="FirstTest_testSaveArticlesInOneFolder - 2018.07.28 at 16h 19m 05s.xml">
+      <configuration name="FirstTest.testSaveArticlesInOneFolder" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FirstTest_testCheckWordInSearchResults - 2018.07.23 at 16h 07m 01s.xml">
-      <configuration name="FirstTest.testCheckWordInSearchResults" configurationId="JUnit" />
+    <history-entry file="FirstTest_testSaveArticlesInOneFolder - 2018.07.28 at 16h 21m 10s.xml">
+      <configuration name="FirstTest.testSaveArticlesInOneFolder" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FirstTest_testCheckWordInSearchResults - 2018.07.23 at 16h 09m 39s.xml">
-      <configuration name="FirstTest.testCheckWordInSearchResults" configurationId="JUnit" />
+    <history-entry file="FirstTest_testSaveArticlesInOneFolder - 2018.07.28 at 16h 21m 45s.xml">
+      <configuration name="FirstTest.testSaveArticlesInOneFolder" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_appium_automation_java - 2018.07.23 at 16h 11m 57s.xml">
-      <configuration name="All in appium_automation_java" configurationId="JUnit" />
+    <history-entry file="FirstTest_testSaveArticlesInOneFolder - 2018.07.28 at 16h 23m 17s.xml">
+      <configuration name="FirstTest.testSaveArticlesInOneFolder" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FirstTest_testCheckWordInSearchResults - 2018.07.23 at 16h 15m 55s.xml">
-      <configuration name="FirstTest.testCheckWordInSearchResults" configurationId="JUnit" />
+    <history-entry file="FirstTest - 2018.07.28 at 16h 29m 21s.xml">
+      <configuration name="FirstTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FirstTest_testCancelSearch - 2018.07.23 at 16h 19m 18s.xml">
-      <configuration name="FirstTest.testCancelSearch" configurationId="JUnit" />
+    <history-entry file="FirstTest_testChangeScreenOrientationOnSearchResults - 2018.07.28 at 16h 32m 36s.xml">
+      <configuration name="FirstTest.testChangeScreenOrientationOnSearchResults" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FirstTest_testCancelSearchResult - 2018.07.23 at 16h 19m 43s.xml">
-      <configuration name="FirstTest.testCancelSearchResult" configurationId="JUnit" />
+    <history-entry file="FirstTest_testCheckSearchArticleInBackground - 2018.07.28 at 16h 33m 07s.xml">
+      <configuration name="FirstTest.testCheckSearchArticleInBackground" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="0" width="971" height="855" extended-state="0" />
+    <frame x="-14" y="0" width="1088" height="860" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="7" weight="0.32837838" />
-      <window_info anchor="right" id="Palette&#9;" order="3" />
-      <window_info id="Image Layers" order="2" />
-      <window_info anchor="right" id="Capture Analysis" order="3" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50089127" side_tool="true" weight="0.32880434" />
-      <window_info anchor="right" id="Maven Projects" order="3" />
-      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49910873" visible="true" weight="0.32837838" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info id="Capture Tool" order="2" />
-      <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.09926855" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.08932039" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info id="UI Designer" order="2" />
-      <window_info anchor="right" id="Theme Preview" order="3" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39945653" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49910873" visible="true" weight="0.32506886" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39945653" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50089127" side_tool="true" weight="0.32880434" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.3264463" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Palette&#9;" order="6" />
+      <window_info anchor="right" id="Maven Projects" order="7" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -327,162 +307,25 @@
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <option name="time" value="1" />
-    </breakpoint-manager>
-  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/FirstTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" column="24" lean-forward="true" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
+        <state relative-caret-position="114">
+          <caret line="172" column="23" lean-forward="true" selection-start-line="172" selection-start-column="23" selection-end-line="172" selection-end-column="23" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#firstTest#0;class#FirstTest#0" />
             <element signature="method#testCancelSearch#0;class#FirstTest#0" />
             <element signature="method#testCompareArticleTitle#0;class#FirstTest#0" />
+            <element signature="method#testSwipeArticle#0;class#FirstTest#0" />
+            <element signature="method#saveFirstArticleToMyList#0;class#FirstTest#0" />
+            <element signature="method#testAmountOfEmptySearch#0;class#FirstTest#0" />
+            <element signature="method#testAmountOfEmptySearch#0;class#FirstTest#0" />
+            <element signature="method#testChangeScreenOrientationOnSearchResults#0;class#FirstTest#0" />
+            <element signature="method#testCheckSearchArticleInBackground#0;class#FirstTest#0" />
             <element signature="method#testCheckPlaceholderInSearchField#0;class#FirstTest#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/FirstTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" column="20" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#firstTest#0;class#FirstTest#0" />
-            <element signature="method#testCancelSearch#0;class#FirstTest#0" />
-            <element signature="method#testCompareArticleTitle#0;class#FirstTest#0" />
-            <element signature="method#testCheckPlaceholderInSearchField#0;class#FirstTest#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/FirstTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" column="20" lean-forward="true" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#firstTest#0;class#FirstTest#0" />
-            <element signature="method#testCancelSearch#0;class#FirstTest#0" />
-            <element signature="method#testCompareArticleTitle#0;class#FirstTest#0" />
-            <element signature="method#testCheckPlaceholderInSearchField#0;class#FirstTest#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/FirstTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3910">
-          <caret line="230" column="10" lean-forward="true" selection-start-line="230" selection-start-column="10" selection-end-line="230" selection-end-column="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#firstTest#0;class#FirstTest#0" />
-            <element signature="method#testCancelSearch#0;class#FirstTest#0" />
-            <element signature="method#testCompareArticleTitle#0;class#FirstTest#0" />
-            <element signature="method#testCheckPlaceholderInSearchField#0;class#FirstTest#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/FirstTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4465">
-          <caret line="235" column="33" lean-forward="true" selection-start-line="235" selection-start-column="33" selection-end-line="235" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#firstTest#0;class#FirstTest#0" />
-            <element signature="method#testCancelSearch#0;class#FirstTest#0" />
-            <element signature="method#testCompareArticleTitle#0;class#FirstTest#0" />
-            <element signature="method#testCheckPlaceholderInSearchField#0;class#FirstTest#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/FirstTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1311">
-          <caret line="69" lean-forward="true" selection-start-line="69" selection-end-line="69" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#firstTest#0;class#FirstTest#0" />
-            <element signature="method#testCancelSearch#0;class#FirstTest#0" />
-            <element signature="method#testCompareArticleTitle#0;class#FirstTest#0" />
-            <element signature="method#testCheckPlaceholderInSearchField#0;class#FirstTest#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/FirstTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1254">
-          <caret line="66" column="24" selection-start-line="41" selection-start-column="4" selection-end-line="67" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#firstTest#0;class#FirstTest#0" />
-            <element signature="method#testCancelSearch#0;class#FirstTest#0" />
-            <element signature="method#testCompareArticleTitle#0;class#FirstTest#0" />
-            <element signature="method#testCheckPlaceholderInSearchField#0;class#FirstTest#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/FirstTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1425">
-          <caret line="75" column="44" selection-start-line="75" selection-start-column="44" selection-end-line="75" selection-end-column="44" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#firstTest#0;class#FirstTest#0" />
-            <element signature="method#testCancelSearch#0;class#FirstTest#0" />
-            <element signature="method#testCompareArticleTitle#0;class#FirstTest#0" />
-            <element signature="method#testCheckPlaceholderInSearchField#0;class#FirstTest#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/FirstTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="779">
-          <caret line="41" column="1" lean-forward="true" selection-start-line="41" selection-start-column="1" selection-end-line="41" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#firstTest#0;class#FirstTest#0" />
-            <element signature="method#testCancelSearch#0;class#FirstTest#0" />
-            <element signature="method#testCompareArticleTitle#0;class#FirstTest#0" />
-            <element signature="method#testCheckPlaceholderInSearchField#0;class#FirstTest#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/FirstTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="109">
-          <caret line="24" column="72" selection-start-line="24" selection-start-column="72" selection-end-line="24" selection-end-column="72" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#firstTest#0;class#FirstTest#0" />
-            <element signature="method#testCancelSearch#0;class#FirstTest#0" />
-            <element signature="method#testCompareArticleTitle#0;class#FirstTest#0" />
-            <element signature="method#testCheckPlaceholderInSearchField#0;class#FirstTest#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/FirstTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="94">
-          <caret line="161" column="29" selection-start-line="161" selection-start-column="29" selection-end-line="161" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#firstTest#0;class#FirstTest#0" />
-            <element signature="method#testCancelSearch#0;class#FirstTest#0" />
-            <element signature="method#testCompareArticleTitle#0;class#FirstTest#0" />
-            <element signature="method#testCheckPlaceholderInSearchField#0;class#FirstTest#0" />
+            <element signature="method#testCancelSearchResult#0;class#FirstTest#0" />
+            <element signature="method#testCheckWordInSearchResults#0;class#FirstTest#0" />
           </folding>
         </state>
       </provider>
@@ -557,7 +400,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.23103449" />
               </list>
             </option>
           </splitter-proportions>
