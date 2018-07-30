@@ -725,6 +725,17 @@ public class FirstTest {
         );
     }
 
+    // Ex7* Rotate Device
+    @Test
+    public void testCheckOrientation() {
+        // Add before test for check device orientation
+        String orientation_after_fail = driver.getOrientation().toString();
+        if (orientation_after_fail.equals("LANDSCAPE")) {
+            driver.rotate(ScreenOrientation.PORTRAIT);
+        }
+    }
+
+
     private WebElement waitForElementPresent(By by, String error_message, long timeoutInSeconds) {
         WebDriverWait wait = new WebDriverWait(driver, timeoutInSeconds);
         wait.withMessage(error_message + "\n");
