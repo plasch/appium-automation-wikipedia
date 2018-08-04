@@ -331,15 +331,4 @@ public class FirstTest extends CoreTestCase {
                 "Cannot find title of article"
         );
     }
-
-    // Ex7* Rotate Device
-    @Test
-    public void testCheckOrientation() {
-        // Add before test for check device orientation
-        String orientation_after_fail = driver.getOrientation().toString();
-        if (orientation_after_fail.equals("LANDSCAPE")) {
-            driver.rotate(ScreenOrientation.PORTRAIT);
-        }
-    }
-
 }

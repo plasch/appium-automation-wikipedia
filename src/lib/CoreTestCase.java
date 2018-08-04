@@ -28,6 +28,9 @@ public class CoreTestCase extends TestCase {
         capabilities.setCapability("appActivity", ".main.MainActivity");
         capabilities.setCapability("app", "E:\\GitHub\\appium_automation_java\\apks\\org.wikipedia.apk");
 
+        // Ex7* Rotate Device
+        capabilities.setCapability("orientation", "PORTRAIT");
+
         driver = new AndroidDriver(new URL(AppiumURL), capabilities);
         this.rotateScreenPortrait();
 
