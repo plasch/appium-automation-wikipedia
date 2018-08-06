@@ -91,4 +91,21 @@ public class ExTests extends CoreTestCase
         ArticlePageObject ArticlePageObject = new ArticlePageObject(driver);
         ArticlePageObject.assertArticleTitlePresent();
     }
+
+    // Ex9* Create test with refactoring of template
+    @Test
+    public void testCheckArticleByTemplate()
+    {
+        SearchPageObject SearchPageObject = new SearchPageObject(driver);
+
+        SearchPageObject.initSearchInput();
+        SearchPageObject.typeSearchLine("Android");
+        int amount_of_search_results = SearchPageObject.getAmountOfFoundArticles();
+        System.out.print(amount_of_search_results);
+        assertTrue(
+                "Less than 3 articles in search results",
+                amount_of_search_results >= 3
+        );
+        SearchPageObject.waitForElementByTitleAndDescription("Android", "An open source operating system for mobile devices created by Google");
+    }
 }

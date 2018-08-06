@@ -12,7 +12,8 @@ public class SearchPageObject extends MainPageObject
             SEARCH_RESULT_BY_SUBSTRING_TPL = "//*[@resource-id='org.wikipedia:id/page_list_item_container']//*[@text='{SUBSTRING}']",
             SEARCH_RESULT_ELEMENT = "//*[@resource-id='org.wikipedia:id/search_results_list']/*[@resource-id='org.wikipedia:id/page_list_item_container']",
             SEARCH_EMPTY_RESULT_ELEMENT = "//*[@text='No results found']",
-            SEARCH_RESULTS_EMPTY_MESSAGE = "org.wikipedia:id/search_empty_message";
+            SEARCH_RESULTS_EMPTY_MESSAGE = "org.wikipedia:id/search_empty_message",
+            SEARCH_TITLE_AND_DESCRIPTION_TPL = "//*[@resource-id='org.wikipedia:id/page_list_item_container']//*[@resource-id='org.wikipedia:id/page_list_item_title'][contains(@text,'{TITLE}')]/../*[@resource-id='org.wikipedia:id/page_list_item_description'][@text='{DESCRIPTION}']/..";
 
     public SearchPageObject(AppiumDriver driver)
     {
@@ -24,8 +25,12 @@ public class SearchPageObject extends MainPageObject
     {
         return SEARCH_RESULT_BY_SUBSTRING_TPL.replace("{SUBSTRING}", substring);
     }
-    /* TEMPLATES METHOD */
 
+    private static String getResultSearchElementWithTitleAndDescription(String title, String description)
+    {
+        return SEARCH_TITLE_AND_DESCRIPTION_TPL.replace("{TITLE}", title).replace("{DESCRIPTION}", description);
+    }
+    /* TEMPLATES METHOD */
 
     public void initSearchInput()
     {
@@ -88,5 +93,13 @@ public class SearchPageObject extends MainPageObject
     public void waitForSearchResultsToDisappear()
     {
         this.waitForElementPresent(By.id(SEARCH_RESULTS_EMPTY_MESSAGE), "Search results are still present on search page", 10);
+    }
+
+    public void waitForElementByTitleAndDescription(String title, String description)
+    {
+        String search_result_by_title_and_description = getResultSearchElementWithTitleAndDescription(title, description);
+        this.waitForElementPresent(By.xpath(search_result_by_title_and_description),
+                "Cannot find article which has title: '" + title + "' and description '" + description + "'",
+                15);
     }
 }
