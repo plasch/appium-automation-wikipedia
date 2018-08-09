@@ -24,13 +24,13 @@ public class FirstTest extends CoreTestCase {
     public void testCheckPlaceholderInSearchField() {
 
         MainPageObject.waitForElementAndClick(
-                By.id("org.wikipedia:id/search_container"),
+                "id:org.wikipedia:id/search_container",
                 "Cannot find 'Search Wikipedia' input",
                 5
         );
 
         WebElement element = MainPageObject.waitForElementPresent(
-                By.id("org.wikipedia:id/search_src_text"),
+                "id:org.wikipedia:id/search_src_text",
                 "Cannot find placeholder 'Search…'",
                 15
         );
@@ -48,14 +48,14 @@ public class FirstTest extends CoreTestCase {
     @Test
     public void testCheckWordInSearchResults() {
         MainPageObject.waitForElementAndClick(
-                By.id("org.wikipedia:id/search_container"),
+                "id:org.wikipedia:id/search_container",
                 "Cannot find 'Search Wikipedia' input",
                 10
         );
 
         String search_line = "Android";
         MainPageObject.waitForElementAndSendKeys(
-                By.id("org.wikipedia:id/search_src_text"),
+                "id:org.wikipedia:id/search_src_text",
                 search_line,
                 "Cannot find search input",
                 10
