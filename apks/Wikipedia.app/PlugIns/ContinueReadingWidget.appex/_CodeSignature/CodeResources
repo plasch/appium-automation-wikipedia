@@ -14,15 +14,15 @@
 		</data>
 		<key>Base.lproj/MainInterface.storyboardc/M4Y-Lb-cyx-view-S3S-Oj-5AN.nib</key>
 		<data>
-		F/VlZzrMIXRGbXFrmAY9v78giBU=
+		TBdPDwjv8G4BB1KtpdbOuRIduYE=
 		</data>
 		<key>Base.lproj/MainInterface.storyboardc/UIViewController-M4Y-Lb-cyx.nib</key>
 		<data>
-		nAXWGwg9fEJ2zXm9DeOphb3BTi8=
+		fFTRPmntZOtWoRoY2r88bW6ModQ=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		oIgf0VAIcnKmCmXAj0w4Si9wSlY=
+		1Xc5vJUcClvyMz55jjeY/wmXWVY=
 		</data>
 		<key>en.lproj/InfoPlist.strings</key>
 		<dict>
@@ -38,6 +38,10 @@
 	<dict>
 		<key>Base.lproj/InfoPlist.strings</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			cEfGGYjSufquKwjwGzLJzyNvyrM=
+			</data>
 			<key>hash2</key>
 			<data>
 			N2neWCXPMgE/LJyV9ZHFRuNVMJMLFfhyT3QjeRqjsqI=
@@ -45,6 +49,10 @@
 		</dict>
 		<key>Base.lproj/MainInterface.storyboardc/Info.plist</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			0MIPa0qiDjReRwwobTsnJ01z+l0=
+			</data>
 			<key>hash2</key>
 			<data>
 			sOic6ugSKWwGvBSX5ZyYEUE+pFecCWW0YXAo5CNbmCQ=
@@ -52,20 +60,32 @@
 		</dict>
 		<key>Base.lproj/MainInterface.storyboardc/M4Y-Lb-cyx-view-S3S-Oj-5AN.nib</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			TBdPDwjv8G4BB1KtpdbOuRIduYE=
+			</data>
 			<key>hash2</key>
 			<data>
-			RsHeDRvb4UqOJDrWqX5J5m3A0zAujR/098hv862Pj+s=
+			akDHQC9vItFa2UqZ5sGuFzTbwAYnV7zVJiixY0N5lMg=
 			</data>
 		</dict>
 		<key>Base.lproj/MainInterface.storyboardc/UIViewController-M4Y-Lb-cyx.nib</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			fFTRPmntZOtWoRoY2r88bW6ModQ=
+			</data>
 			<key>hash2</key>
 			<data>
-			kz5Ivnt5cNPPafhgCL4pj/4FRIH1cKr6hHTl2/cAtK8=
+			swkyTpL2q+5SXUkunTmsv5dDwbtn5AgtAbI0tjdE1bs=
 			</data>
 		</dict>
 		<key>en.lproj/InfoPlist.strings</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			cEfGGYjSufquKwjwGzLJzyNvyrM=
+			</data>
 			<key>hash2</key>
 			<data>
 			N2neWCXPMgE/LJyV9ZHFRuNVMJMLFfhyT3QjeRqjsqI=
