@@ -5,6 +5,7 @@ import lib.ui.ArticlePageObject;
 import lib.ui.MyListsPageObject;
 import lib.ui.NavigationUI;
 import lib.ui.SearchPageObject;
+import lib.ui.factories.SearchPageObjectFactory;
 import org.junit.Test;
 
 public class ExTests extends CoreTestCase
@@ -13,7 +14,7 @@ public class ExTests extends CoreTestCase
     @Test
     public void testCancelSearchResult()
     {
-        SearchPageObject SearchPageObject = new SearchPageObject(driver);
+        SearchPageObject SearchPageObject = SearchPageObjectFactory.get(driver);
 
         SearchPageObject.initSearchInput();
         String search_line = "Android";
@@ -30,7 +31,7 @@ public class ExTests extends CoreTestCase
     // Ex5 Create test: Save two articles in one folder
     @Test
     public void testSaveArticlesInOneFolder() {
-        SearchPageObject SearchPageObject = new SearchPageObject(driver);
+        SearchPageObject SearchPageObject = SearchPageObjectFactory.get(driver);
 
         SearchPageObject.initSearchInput();
         String search_line = "Android";
@@ -82,7 +83,7 @@ public class ExTests extends CoreTestCase
     @Test
     public void testAssertTitle()
     {
-        SearchPageObject SearchPageObject = new SearchPageObject(driver);
+        SearchPageObject SearchPageObject = SearchPageObjectFactory.get(driver);
 
         SearchPageObject.initSearchInput();
         SearchPageObject.typeSearchLine("Android");
@@ -96,7 +97,7 @@ public class ExTests extends CoreTestCase
     @Test
     public void testCheckArticleByTemplate()
     {
-        SearchPageObject SearchPageObject = new SearchPageObject(driver);
+        SearchPageObject SearchPageObject = SearchPageObjectFactory.get(driver);
 
         SearchPageObject.initSearchInput();
         SearchPageObject.typeSearchLine("Android");
