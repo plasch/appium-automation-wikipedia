@@ -8,6 +8,7 @@ abstract public class ArticlePageObject extends MainPageObject
 {
     protected static String
             TITLE,
+            TITLE_TPL,
             FOOTER_ELEMENT,
             OPTION_BUTTON,
             OPTION_ADD_TO_MY_LIST_BUTTON,
@@ -15,12 +16,20 @@ abstract public class ArticlePageObject extends MainPageObject
             MY_LIST_NAME_INPUT,
             MY_LIST_OK_BUTTON,
             CLOSE_ARTICLE_BUTTON,
-            CREATED_FOLDER_NAME_TPL;
+            CREATED_FOLDER_NAME_TPL,
+            CLOSE_POP_UP_BUTTON;
 
+    /* TEMPLATES METHODS */
     private static String getCreatedFolderXpathByName(String name_of_folder)
     {
         return CREATED_FOLDER_NAME_TPL.replace("{NAME_OF_EXIST_FOLDER}", name_of_folder);
     }
+
+    private static String getArticleText(String title_text)
+    {
+        return TITLE_TPL.replace("{SEARCH_TEXT}", title_text);
+    }
+    /* TEMPLATES METHODS */
 
     public ArticlePageObject(AppiumDriver driver)
     {
@@ -126,6 +135,15 @@ abstract public class ArticlePageObject extends MainPageObject
         this.waitForElementAndClick(
                 OPTION_ADD_TO_MY_LIST_BUTTON,
                 "Cannot find option to add article to reading list",
+                5
+        );
+    }
+
+    public void closeSyncPopup()
+    {
+        this.waitForElementAndClick(
+                CLOSE_POP_UP_BUTTON,
+                "Cannot find close icon on pop-up",
                 5
         );
     }

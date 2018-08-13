@@ -1,6 +1,7 @@
 package tests;
 
 import lib.CoreTestCase;
+import lib.Platform;
 import lib.ui.ArticlePageObject;
 import lib.ui.MyListsPageObject;
 import lib.ui.NavigationUI;
@@ -32,33 +33,45 @@ public class ExTests extends CoreTestCase
     }
 
     // Ex5 Create test: Save two articles in one folder
+    // Ex10 Refactoring Ex5 Test for iOS
     @Test
     public void testSaveArticlesInOneFolder() {
+
         SearchPageObject SearchPageObject = SearchPageObjectFactory.get(driver);
 
-        SearchPageObject.initSearchInput();
-        String search_line = "Android";
+        String name_of_folder = "Android OS";
+        String first_article = "Android (operating system)";
+        String second_article = "Android software development";
 
         // Search and add FIRST article
-        SearchPageObject.typeSearchLine(search_line);
-        SearchPageObject.clickByArticleWithSubstring("An open source operating system for mobile devices created by Google");
+        SearchPageObject.initSearchInput();
+        SearchPageObject.typeSearchLine("Android");
+        SearchPageObject.clickByArticleWithSubstring(first_article);
 
         ArticlePageObject ArticlePageObject = ArticlePageObjectFactory.get(driver);
 
-        ArticlePageObject.waitForTitleElement();
-        String first_article_title = ArticlePageObject.getArticleTitle();
-        String name_of_folder = "Android OS";
-        ArticlePageObject.addArticleToMyList(name_of_folder);
+        if (Platform.getInstance().isAndroid()) {
+            ArticlePageObject.waitForTitleElement();
+            ArticlePageObject.addArticleToMyList(name_of_folder);
+        } else {
+            ArticlePageObject.addArticleToMySaved();
+            ArticlePageObject.closeSyncPopup();
+        }
         ArticlePageObject.closeArticle();
 
         // Search and add SECOND article
         SearchPageObject.initSearchInput();
-        SearchPageObject.typeSearchLine(search_line);
-        SearchPageObject.clickByArticleWithSubstring("Android software development");
-        ArticlePageObject.waitForTitleElement();
-        String second_article_title = ArticlePageObject.getArticleTitle();
+        if (Platform.getInstance().isAndroid()) {
+            SearchPageObject.typeSearchLine("Android");
+        }
+        SearchPageObject.clickByArticleWithSubstring(second_article);
 
-        ArticlePageObject.addArticleToExistList(name_of_folder);
+        if (Platform.getInstance().isAndroid()) {
+            ArticlePageObject.waitForTitleElement();
+            ArticlePageObject.addArticleToExistList(name_of_folder);
+        } else {
+            ArticlePageObject.addArticleToMySaved();
+        }
         ArticlePageObject.closeArticle();
 
         // Transfer to My list and remove first article
@@ -67,19 +80,24 @@ public class ExTests extends CoreTestCase
 
         MyListsPageObject MyListsPageObject = MyListsPageObjectFactory.get(driver);
 
-        MyListsPageObject.openFolderByName(name_of_folder);
-        MyListsPageObject.swipeByArticleToDelete(first_article_title);
-        MyListsPageObject.waitArticleToDisappearByTitle(first_article_title);
-        MyListsPageObject.openArticleByTitle(second_article_title);
+        if (Platform.getInstance().isAndroid()) {
+            MyListsPageObject.openFolderByName(name_of_folder);
+        }
 
-        ArticlePageObject.waitForTitleElement();
-        String title_of_opened_article = ArticlePageObject.getArticleTitle();
+        MyListsPageObject.swipeByArticleToDelete(first_article);
 
-        assertEquals(
-                "Titles articles don't match",
-                second_article_title,
-                title_of_opened_article
-        );
+        if (Platform.getInstance().isAndroid()) {
+            MyListsPageObject.openArticleByTitle(second_article);
+            String article_title_after_deleting = ArticlePageObject.getArticleTitle();
+            assertEquals(
+                    "Titles articles don't match",
+                    article_title_after_deleting,
+                    second_article
+            );
+        } else {
+            MyListsPageObject.waitArticleToAppearByTitle(second_article);
+
+        }
     }
 
     // Ex6 Create test: Assert title

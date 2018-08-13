@@ -33,6 +33,7 @@ public class MyListsTests extends CoreTestCase
             ArticlePageObject.addArticleToMyList(name_of_folder);
         } else {
             ArticlePageObject.addArticleToMySaved();
+            ArticlePageObject.closeSyncPopup();
         }
         ArticlePageObject.closeArticle();
 
